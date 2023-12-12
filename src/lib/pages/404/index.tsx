@@ -36,18 +36,18 @@ const Page404 = () => {
           isExternal
           rel="noopener noreferrer"
         >
-          Illustration by Freepik Stories
+          Ilustração: Freepik Stories
         </ChakraLink>
       </Text>
 
       <Box marginY={4}>
         <Heading textAlign="center" size="lg">
-          Page not Found.
+          Você não possui autorização.
         </Heading>
 
         <Box textAlign="center" marginTop={4}>
           <Text fontSize="sm" color="gray">
-            It&apos;s Okay!
+            Faça LogIn para poder ver esta página.
           </Text>
           <Button
             as={Link}
@@ -55,7 +55,7 @@ const Page404 = () => {
             backgroundColor={colorMode === 'light' ? 'gray.300' : 'teal.500'}
             size="sm"
           >
-            Let&apos;s Head Back
+            Voltar
           </Button>
         </Box>
       </Box>

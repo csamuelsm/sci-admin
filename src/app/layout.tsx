@@ -7,11 +7,11 @@ type RootLayoutProps = {
   children: React.ReactNode;
 };
 
-const APP_NAME = 'nextarter-chakra';
+const APP_NAME = 'SCI-Admin';
 
 export const metadata: Metadata = {
-  title: { default: APP_NAME, template: '%s | nextarter-chakra' },
-  description: 'Next.js + chakra-ui + TypeScript template',
+  title: { default: APP_NAME, template: '%s | SCI-Admin' },
+  description: 'SCI Admin',
   applicationName: APP_NAME,
   appleWebApp: {
     capable: true,
@@ -47,7 +47,7 @@ const RootLayout = ({ children }: RootLayoutProps) => {
     <html lang="en">
       <body>
         <Providers>
-          <Layout>{children}</Layout>
+            <Layout>{children}</Layout>
         </Providers>
       </body>
     </html>
