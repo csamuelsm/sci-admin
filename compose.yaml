@@ -26,6 +26,14 @@ services:
       - 5432:5432
     volumes:
       - pgdata:/var/lib/postgres/data
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.sci.rule=PathPrefix(`/sci-admin`)&&Host(`sci01-ter-jne.ufca.edu.br`)"
+      - "traefik.http.routers.sci.tls=true"
+      - "traefik.http.routers.sci.tls.certresolver=certificado"
+      - "traefik.http.routers.sci.entrypoints=websecure"
+      - "traefik.http.routers.sci.middlewares=m-replacepath"
+      - "traefik.http.middlewares.m-replacepath.replacepath.path=/"
 
 volumes:
   pgdata: {}
