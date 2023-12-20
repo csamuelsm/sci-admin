@@ -1,8 +1,8 @@
 version: '3.9'
 
 services:
-  backend:
-    container_name: backend
+  backend-sci:
+    container_name: backend-sci
     image: backend
     build:
       context: ./
@@ -14,8 +14,8 @@ services:
       - DATABASE_URL=postgresql://postgres:postgres@db:5432/postgres?schema=public
     depends_on:
       - db
-  db:
-    container_name: db
+  db-sci:
+    container_name: db-sci
     image: postgres:12
     restart: always
     environment:
