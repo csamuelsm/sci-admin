@@ -13,7 +13,7 @@ services:
     environment:
       - DATABASE_URL=postgresql://postgres:postgres@db-sci:5432/postgres?schema=public
     depends_on:
-      - db
+      - db-sci
   db-sci:
     container_name: db-sci
     image: postgres:12
