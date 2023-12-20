@@ -11,7 +11,7 @@ services:
       - "3000:3000"
       - "5555:5555"
     environment:
-      - DATABASE_URL=postgresql://postgres:postgres@db:5432/postgres?schema=public
+      - DATABASE_URL=postgresql://postgres:postgres@db-sci:5432/postgres?schema=public
     depends_on:
       - db
   db-sci:
